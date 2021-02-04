@@ -1,0 +1,12 @@
+version: '3.5'
+
+services: 
+  app:
+    image: node:15-alpine
+    volumes:
+      - ./:/app:cached
+    working_dir: /app
+    ports:
+      - 3000:3000
+    command: yarn start
+    tty: true
